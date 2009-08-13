@@ -83,7 +83,7 @@ endfunction
 
 " Fin.  "{{{1
 
-let g:loaded_textobj_fold = 1
+let g:loaded_textobj_entire = 1
 
 
 

@@ -106,6 +106,9 @@ BUGS						*textobj-entire-bugs*
 ==============================================================================
 CHANGELOG					*textobj-entire-changelog*
 
+0.0.1	2009-08-13T21:21:01+09:00
+	- Fix a typo on the name of a variable.
+
 0.0.0	2009-04-15T14:41:17+09:00
 	- Initial version.
 
