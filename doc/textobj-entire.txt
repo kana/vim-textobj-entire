@@ -1,9 +1,9 @@
 *textobj-entire.txt*	Text objects for entire buffer
 
-Version 0.0.1
+Version 0.0.2
 Script ID: 2610
-Copyright (C) 2009 kana <http://whileimautomaton.net/>
-License: MIT license  {{{
+Copyright (C) 2009-2013 Kana Natsuno <http://whileimautomaton.net/>
+License: So-called MIT license  {{{
     Permission is hereby granted, free of charge, to any person obtaining
     a copy of this software and associated documentation files (the
     "Software"), to deal in the Software without restriction, including
@@ -49,8 +49,14 @@ Requirements:
 - Vim 7.2 or later
 - |textobj-user| 0.3.7 or later (vimscript#2100)
 
+Installation:
+- Recommended way: Use vim-flavor <https://github.com/kana/vim-flavor>.
+
 Latest version:
-http://github.com/kana/config/commits/vim-textobj-entire
+https://github.com/kana/vim-textobj-entire
+
+Document in HTML format:
+http://vim-doc.heroku.com/view?https://github.com/kana/vim-textobj-entire/blob/master/doc/textobj-entire.txt
 
 
 
@@ -105,6 +111,10 @@ BUGS						*textobj-entire-bugs*
 
 ==============================================================================
 CHANGELOG					*textobj-entire-changelog*
+
+0.0.2	2013-01-18T19:38:03+09:00		*textobj-entire-changelog-0.0.2*
+	- Support vim-flavor <https://github.com/kana/vim-flavor>.
+	- Update |textobj-entire-introduction|.
 
 0.0.1	2009-08-13T21:21:01+09:00
 	- Fix a typo on the name of a variable.
