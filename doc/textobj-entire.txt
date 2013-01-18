@@ -112,6 +112,10 @@ BUGS						*textobj-entire-bugs*
 ==============================================================================
 CHANGELOG					*textobj-entire-changelog*
 
+0.0.2	2013-01-18T19:38:03+09:00		*textobj-entire-changelog-0.0.2*
+	- Support vim-flavor <https://github.com/kana/vim-flavor>.
+	- Update |textobj-entire-introduction|.
+
 0.0.1	2009-08-13T21:21:01+09:00
 	- Fix a typo on the name of a variable.
 
