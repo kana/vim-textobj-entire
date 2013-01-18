@@ -52,6 +52,9 @@ Requirements:
 Latest version:
 https://github.com/kana/vim-textobj-entire
 
+Document in HTML format:
+http://vim-doc.heroku.com/view?https://github.com/kana/vim-textobj-entire/blob/master/doc/textobj-entire.txt
+
 
 
 
