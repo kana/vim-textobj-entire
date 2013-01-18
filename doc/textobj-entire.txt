@@ -49,6 +49,9 @@ Requirements:
 - Vim 7.2 or later
 - |textobj-user| 0.3.7 or later (vimscript#2100)
 
+Installation:
+- Recommended way: Use vim-flavor <https://github.com/kana/vim-flavor>.
+
 Latest version:
 https://github.com/kana/vim-textobj-entire
 
