@@ -52,6 +52,10 @@ call textobj#user#plugin('entire', {
 
 " Misc.  "{{{1
 function! s:select_a()
+  " To easily back to the last position after a command.
+  " For example: yae<C-o>
+  mark '
+
   keepjumps normal! gg0
   let start_pos = getpos('.')
 
@@ -62,6 +66,10 @@ function! s:select_a()
 endfunction
 
 function! s:select_i()
+  " To easily back to the last position after a command.
+  " For example: yie<C-o>
+  mark '
+
   keepjumps normal! gg0
   call search('^.', 'cW')
   let start_pos = getpos('.')
