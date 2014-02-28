@@ -41,8 +41,10 @@ Changelog		|textobj-entire-changelog|
 ==============================================================================
 INTRODUCTION					*textobj-entire-introduction*
 
-*textobj-entire* is a Vim plugin to provide text objects to select the entire
-content of a buffer.
+*textobj-entire* is a Vim plugin to provide text objects (|ae| and |ie| by
+default) to select the entire content of a buffer.  Though these are trivial
+operations (e.g. `ggVG`), text object versions are more handy, because you do
+not have to be conscious of the cursor position (e.g. `vae`).
 
 
 Requirements:
@@ -71,10 +73,20 @@ These key mappings are defined in Visual mode and Operator-pending mode.
 
 <Plug>(textobj-entire-a)			*<Plug>(textobj-entire-a)*
 			Select the entire content of the current buffer.
+			This is like `ggVG`, but you do not have to be
+			conscious of the cursor position.
 
 <Plug>(textobj-entire-i)			*<Plug>(textobj-entire-i)*
 			Like |<Plug>(textobj-entire-a)|, but leading and
-			trailing empty lines are excluded.
+			trailing empty lines are excluded.  This is handy for
+			some situations that you do not want to include such
+			empty lines.  For example:
+
+			1. Paste some text into a new buffer (`<C-w>n"*P`)
+			   -- note that the initial empty line is left
+			      as the last line.
+			2. Edit the text (`:%s/foo/bar/g` etc)
+			3. Copy the text to another application (`"*yie`)
 
 
 
