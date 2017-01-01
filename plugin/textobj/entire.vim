@@ -26,79 +26,19 @@ if exists('g:loaded_textobj_entire')  "{{{1
   finish
 endif
 
-
-
-
-
-
-
-
 " Interface  "{{{1
 
 call textobj#user#plugin('entire', {
 \      '-': {
 \        '*sfile*': expand('<sfile>:p'),
-\        'select-a': 'ae',  '*select-a-function*': 's:select_a',
-\        'select-i': 'ie',  '*select-i-function*': 's:select_i'
+\        'select-a': 'ae',  '*select-a-function*': 'textobj#entire#select_a',
+\        'select-i': 'ie',  '*select-i-function*': 'textobj#entire#select_i'
 \      }
 \    })
-
-
-
-
-
-
-
-
-" Misc.  "{{{1
-function! s:select_a()
-  " To easily back to the last position after a command.
-  " For example: yae<C-o>
-  mark '
-
-  keepjumps normal! gg0
-  let start_pos = getpos('.')
-
-  keepjumps normal! G$
-  let end_pos = getpos('.')
-
-  return ['V', start_pos, end_pos]
-endfunction
-
-function! s:select_i()
-  " To easily back to the last position after a command.
-  " For example: yie<C-o>
-  mark '
-
-  keepjumps normal! gg0
-  call search('^.', 'cW')
-  let start_pos = getpos('.')
-
-  keepjumps normal! G$
-  call search('^.', 'bcW')
-  normal! $
-  let end_pos = getpos('.')
-
-  return ['V', start_pos, end_pos]
-endfunction
-
-
-
-
-
-
-
 
 " Fin.  "{{{1
 
 let g:loaded_textobj_entire = 1
-
-
-
-
-
-
-
 
 " __END__
 " vim: foldmethod=marker
