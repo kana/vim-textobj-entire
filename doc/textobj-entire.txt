@@ -1,6 +1,6 @@
 *textobj-entire.txt*	Text objects for entire buffer
 
-Version 0.0.3
+Version 0.0.4
 Script ID: 2610
 Copyright (C) 2009-2018 Kana Natsuno <http://whileimautomaton.net/>
 License: MIT license  {{{
