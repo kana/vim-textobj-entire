@@ -1,8 +1,8 @@
 *textobj-entire.txt*	Text objects for entire buffer
 
-Version 0.0.3
+Version 0.0.4
 Script ID: 2610
-Copyright (C) 2009-2014 Kana Natsuno <http://whileimautomaton.net/>
+Copyright (C) 2009-2018 Kana Natsuno <http://whileimautomaton.net/>
 License: MIT license  {{{
     Permission is hereby granted, free of charge, to any person obtaining
     a copy of this software and associated documentation files (the
@@ -51,14 +51,8 @@ Requirements:
 - Vim 7.2 or later
 - |textobj-user| 0.3.7 or later (vimscript#2100)
 
-Installation:
-- Recommended way: Use vim-flavor <https://github.com/kana/vim-flavor>.
-
 Latest version:
 https://github.com/kana/vim-textobj-entire
-
-Document in HTML format:
-http://vim-doc.heroku.com/view?https://github.com/kana/vim-textobj-entire/blob/master/doc/textobj-entire.txt
 
 
 
@@ -123,6 +117,12 @@ BUGS						*textobj-entire-bugs*
 
 ==============================================================================
 CHANGELOG					*textobj-entire-changelog*
+
+0.0.4	2018-01-19T19:06:11+09:00	      *textobj-entire-changelog-0.0.4*
+        - Fix the bug that the cursor is not restored to the correct column
+          when using <C-o> or `` after `ae` or `ie`.  For example, `yae<C-o>`
+          moved the cursor to the correct line, but incorrect column (that is
+          the first non-blank character in the line).
 
 0.0.3	2014-02-26T22:28:27+09:00	      *textobj-entire-changelog-0.0.3*
 	- Fix to maintain the |jumplist| for usability.  For example, yae<C-o>
