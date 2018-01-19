@@ -1,6 +1,6 @@
 " textobj-entire - Text objects for entire buffer
 " Version: 0.0.3
-" Copyright (C) 2009-2014 Kana Natsuno <http://whileimautomaton.net/>
+" Copyright (C) 2009-2018 Kana Natsuno <http://whileimautomaton.net/>
 " License: MIT license  {{{
 "     Permission is hereby granted, free of charge, to any person obtaining
 "     a copy of this software and associated documentation files (the
@@ -21,28 +21,45 @@
 "     TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
 "     SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 " }}}
+" Interface  "{{{1
+function! textobj#entire#select_a()  "{{{2
+  " To easily back to the last position after a command.
+  " For example: yae<C-o>
+  normal! m'
 
-if exists('g:loaded_textobj_entire')
-  finish
-endif
+  keepjumps normal! gg0
+  let start_pos = getpos('.')
 
-call textobj#user#plugin('entire', {
-\      '-': {
-\        'select-a': 'ae',  'select-a-function': 'textobj#entire#select_a',
-\        'select-i': 'ie',  'select-i-function': 'textobj#entire#select_i'
-\      }
-\    })
+  keepjumps normal! G$
+  let end_pos = getpos('.')
 
-" Fin.  "{{{1
-
-let g:loaded_textobj_entire = 1
-
+  return ['V', start_pos, end_pos]
+endfunction
 
 
+function! textobj#entire#select_i()  "{{{2
+  " To easily back to the last position after a command.
+  " For example: yie<C-o>
+  normal! m'
+
+  keepjumps normal! gg0
+  call search('^.', 'cW')
+  let start_pos = getpos('.')
+
+  keepjumps normal! G$
+  call search('^.', 'bcW')
+  normal! $
+  let end_pos = getpos('.')
+
+  return ['V', start_pos, end_pos]
+endfunction
 
 
 
 
 
-" __END__
+
+
+
+" __END__  "{{{1
 " vim: foldmethod=marker
