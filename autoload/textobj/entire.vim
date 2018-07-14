@@ -23,7 +23,7 @@
 " }}}
 " Interface  "{{{1
 function! textobj#entire#select_a()  "{{{2
-  " To easily back to the last position after a command.
+  " To easily go back to the last position after a command.
   " For example: yae<C-o>
   normal! m'
 
@@ -38,7 +38,7 @@ endfunction
 
 
 function! textobj#entire#select_i()  "{{{2
-  " To easily back to the last position after a command.
+  " To easily go back to the last position after a command.
   " For example: yie<C-o>
   normal! m'
 
