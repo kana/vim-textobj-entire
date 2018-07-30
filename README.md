@@ -19,7 +19,17 @@ vim-textobj-entire provides two text objects:
 
 See also [the reference manual](https://github.com/kana/vim-textobj-entire/blob/master/doc/textobj-entire.txt) for more details.
 
+**Important:** To use vim-textobj-entire, you must also install
+[vim-textobj-user][]. For example, using vim-plug:
 
+```
+Plug 'kana/vim-textobj-user'
+Plug 'kana/vim-textobj-entire'
+```
 
+For more details, see [the wiki][wiki].
+
+[vim-textobj-user]: https://github.com/kana/vim-textobj-user
+[wiki]: https://github.com/kana/vim-textobj-entire/wiki
 
 <!-- vim: set expandtab shiftwidth=4 softtabstop=4 textwidth=78 : -->
